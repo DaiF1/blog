@@ -1,0 +1,9 @@
+baseURL = 'https://daif1.github.io/blog/'
+theme = 'blowfish'
+defaultContentLanguage = 'en'
+
+[languages]
+    [languages.en]
+        contentDir = 'content/en'
+    [languages.fr]
+        contentDir = 'content/fr'

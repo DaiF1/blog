@@ -1,0 +1,11 @@
+disabled = false
+languageCode = "fr"
+languageName = "English"
+weight = 1
+title = "Le blog de DaiF"
+
+[params]
+  displayName = "FR"
+  isoCode = "fr"
+  rtl = false
+  dateFormat = "2 January 2006"

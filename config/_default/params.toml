@@ -1,0 +1,15 @@
+favicon = "/dino-icon.png"
+
+enableCodeCopy = true
+homepage.showRecent = true
+mainSections = "posts"
+colorScheme = "avocado"
+smartTOC = true
+
+article.showTableOfContents = true
+article.showTaxonomies = true
+article.showHero = true
+article.showSummary = true
+article.showHeadingAnchors = true
+article.showAuthor = false
+article.showAuthorBottom = true
