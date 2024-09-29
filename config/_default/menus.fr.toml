@@ -1,4 +1,10 @@
 [[main]]
+    name = "Retour à la page principale"
+    weight = 5
+    url = "https://daif1.github.io"
+
+[[main]]
+    pre = "pencil"
     name = "Blog"
     pageRef = "posts"
     weight = 10
