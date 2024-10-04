@@ -95,6 +95,29 @@ to the page's content.
 
 ## Deploy it on GitHub Pages
 
+### Create your repository
+
+Connect to your GitHub account and create a new repository. Make sure to set
+it's visibility to "Public".
+
+Once the repository is created, click on the green `Code` button and copy the
+url.
+
+Then, open a terminal in the directory created by git and type the following
+commands:
+
+```
+git remote add origin <repository-url>
+git branch -M main
+git pull origin main
+git push -u origin main
+```
+
+{{< alert "circle-info" >}}
+When you create a *truly* empty repository (no `README`, no `.gitignore`, nothing),
+those commands are listed at the bottom of the page.
+{{< /alert >}}
+
 ### Installing `gh-pages`
 
 To deploy our website, we'll use a very useful package called `gh-pages`.
@@ -110,11 +133,15 @@ npm install gh-pages --save-dev
 Once the installation is done, add the 2 following rules in the `script` section
 of your `package.json`:
 
-```json
-{
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-}
+```js
+"predeploy": "npm run build",
+"deploy": "gh-pages -d dist",
+```
+
+Also add this line to your `package.json` above the `"script"` section
+(replace `<username>` with your GitHub username):
+```js
+"homepage": "https://<username>.github.io/"
 ```
 
 ### Making it live!
@@ -129,7 +156,7 @@ Fill the settings under "Build and deployment" like so:
 {{< figure src="./pages-settings.png" >}}
 
 Once the pipeline is done running, your website should be deployed at
-`https://your-username.github.io/`.
+`https://<username>.github.io/`.
 
 {{< alert "circle-info" >}}
 

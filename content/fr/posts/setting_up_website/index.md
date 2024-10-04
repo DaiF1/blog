@@ -97,6 +97,31 @@ Maintenant, en lançant `npm run dev`, le bouton devrait ajouter le texte
 
 ## Le déployer sur GitHub Pages
 
+### Créer son repo GitHub
+
+La première étape pour déployer notre site est de créer un repo GitHub.
+
+Il faut donc se rendre sur son compte GitHub et en créer un nouveau. La
+visibilité de ce repo doit être "Publique".
+
+Une fois le repo créé, on peut récupérer son URL à l'aide du bouton `Code`
+en vert.
+
+Une fois l'URL copié, voici les commandes à taper pour pousser notre site sur
+le repo :
+
+```
+git remote add origin <url-du-repo>
+git branch -M main
+git pull origin main
+git push -u origin main
+```
+
+{{< alert "circle-info" >}}
+Lors de la création d'un repo *vraiment* vide (pas de `README`,
+pas de `.gitignore`, rien), ces commandes sont listées en bas de la page.
+{{< /alert >}}
+
 ### Installer `gh-pages`
 
 Pour déployer notre site, on va utiliser un paquet très utile appelé `gh-pages`.
@@ -112,11 +137,15 @@ npm install gh-pages --save-dev
 Une fois l'installation terminée, il faut ajouter les 2 règles suivantes dans
 la partie `script` du fichier `package.json` :
 
-```json
-{
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-}
+```js
+"predeploy": "npm run build",
+"deploy": "gh-pages -d dist",
+```
+
+La ligne décrivant la "homepage" doit aussi être ajoutée au dessus de la section
+`"script"` (en remplaçant `<username>` avec le pseudo GitHub).
+```js
+"homepage": "https://<username>.github.io/"
 ```
 
 ### Il est live !
@@ -131,7 +160,7 @@ Voici à quoi doit ressembler la partie "Build and deployment" :
 {{< figure src="./pages-settings.png" >}}
 
 Une fois que la pipeline est terminée, le site devrait être live sur l'url
-`https://username.github.io/`.
+`https://<username>.github.io/`.
 
 {{< alert "circle-info" >}}
 
