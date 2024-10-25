@@ -143,9 +143,20 @@ la partie `script` du fichier `package.json` :
 ```
 
 La ligne décrivant la "homepage" doit aussi être ajoutée au dessus de la section
-`"script"` (en remplaçant `<username>` avec le pseudo GitHub).
+`"script"` (en remplaçant `<username>` et `<nom-du-repo>` avec le pseudo GitHub et le nom du repo urlifié).
 ```js
-"homepage": "https://<username>.github.io/"
+"homepage": "https://<username>.github.io/<nom-du-repo>"
+```
+
+Enfin, il est nécessaire d'ajouter un fichier `vite.config.js` à la racine du
+projet, contenant les lignes suivantes :
+
+```js
+import { defineConfig } from "vite";
+
+export default defineConfig({
+    base: '<nom-du-repo>'
+})
 ```
 
 ### Il est live !

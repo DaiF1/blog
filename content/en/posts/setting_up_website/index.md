@@ -139,9 +139,20 @@ of your `package.json`:
 ```
 
 Also add this line to your `package.json` above the `"script"` section
-(replace `<username>` with your GitHub username):
+(replace `<username>` and `<repository-name>` with your GitHub username and your repository name urlified):
 ```js
-"homepage": "https://<username>.github.io/"
+"homepage": "https://<username>.github.io/<repository-name>"
+```
+
+Lastly, we need to add a `vite.config.js` file at the root of the project.
+Here is it's content:
+
+```js
+import { defineConfig } from "vite";
+
+export default defineConfig({
+    base: '<repository-name>'
+})
 ```
 
 ### Making it live!
