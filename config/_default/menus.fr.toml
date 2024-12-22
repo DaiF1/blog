@@ -1,5 +1,5 @@
 [[main]]
-    name = "Retour à la page principale"
+    name = "Retour au site principal"
     weight = 5
     url = "https://daif1.github.io"
 
