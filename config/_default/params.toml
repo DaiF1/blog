@@ -9,7 +9,8 @@ smartTOC = true
 article.showTableOfContents = true
 article.showTaxonomies = true
 article.showHero = true
-article.showSummary = true
 article.showHeadingAnchors = true
 article.showAuthor = false
 article.showAuthorBottom = true
+
+list.showSummary = true
