@@ -7,3 +7,6 @@ defaultContentLanguage = 'en'
         contentDir = 'content/en'
     [languages.fr]
         contentDir = 'content/fr'
+
+[markup.goldmark.renderer]
+    unsafe=true
