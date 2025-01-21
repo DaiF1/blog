@@ -1,6 +1,11 @@
 ---
 title: Le grand nettoyage
 showDate: false
+summary: |
+    *Aujourd'hui, c'est nettoyage au village des Schtroumpfs !*  
+    TP de programmation sur la manipulation de listes en Python.
+authors: 
+    - "daif.fr"
 ---
 
 {{< katex >}}
